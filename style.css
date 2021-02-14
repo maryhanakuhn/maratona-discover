@@ -210,6 +210,10 @@ td.expense {
   color: #e92929;
 }
 
+td.edit {
+  color: #e92929;
+}
+
 /* Modal ===================== */
 .modal-overlay {
   width: 100%;

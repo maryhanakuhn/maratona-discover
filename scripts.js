@@ -87,6 +87,9 @@ const DOM = {
         <td>
             <img onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
         </td>
+        <td>
+            <img onclick="Transaction.remove(${index})" src="./assets/edit.svg" alt="Editar transação">
+        </td>
         `;
 
     return html;
@@ -111,9 +114,10 @@ const DOM = {
 
 const Utils = {
   formatAmount(value) {
-    value = Number(value.replace(/\,\./g, "")) * 100;
+    //value = Number(value.replace(/\,\./g, "")) * 100;
 
-    return value;
+    value = value * 100;
+    return Math.round(value);
   },
 
   formatDate(date) {
